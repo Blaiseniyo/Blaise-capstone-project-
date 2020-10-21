@@ -171,11 +171,12 @@ nav{
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .wrapper{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap:2em;
-    /* display: flex;
-    flex-direction: column; */
+    grid-gap:2em; */
+    display: flex;
+    flex-direction: column;
+    
 }
 .wrapper {
     width: 80%;
