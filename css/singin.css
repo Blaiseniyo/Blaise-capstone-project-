@@ -157,6 +157,9 @@ nav{
     height: 45.76px;
     text-align: center;
  }
+ .form{
+    background-color: red;
+}
 
  @media screen and (max-width:1024px){
     .nav-links{
@@ -188,13 +191,62 @@ nav{
     }
 
 }
-
+ 
 @media screen and (max-width:768px){
+    body{
+
+        /* display: none; */
+
+    }
+
+    .form{
+        background-color: red;
+    }
+    .fieldsContainer{
+        /* background-color: red; */
+       
+        left: 100%;
+        position: absolute;
+    }
+    .fieldsContainer button{
+        position: relative;
+        width: 60%;
+        right: 70px;
+    }
+
+    .sign-in-container{
+        background-color: red;
+        position: relative;
+    }
+    .form-group input{
+        flex: 1;
+        font-size: 30px;
+        font-weight: 800;
+        display: block;
+        margin-bottom: 40px;
+        /* width: 80%; */
+        height: 65.76px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 0px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*
     body{
         overflow-x: hidden;
         margin: 0px;
         padding: 0px;
-        /* overflow-x: visible; */
+        overflow-x: visible;
     }
     .nav-links{
         position: absolute;
@@ -211,7 +263,9 @@ nav{
     }
 
     .sign-in-container{
+        overflow: hidden;
         display: flex;
+        display: block;
         position: relative;
         border: 1px solid black;
         width: 100%;
@@ -220,7 +274,14 @@ nav{
         padding: 0px;
     }
 
+    .form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
     .form-group input{
+        position: absolute;
         flex: 1;
         font-size: 30px;
         font-weight: 800;
@@ -248,7 +309,7 @@ nav{
 
 .nav-active{
     transform: translateX(0%);
-}
+}  */
 
 @keyframes navLinkFade{
     from{
