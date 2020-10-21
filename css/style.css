@@ -90,8 +90,8 @@ nav{
 
 .skill-list{
     display: grid;
-    grid-template-columns: repeat(3,2fr);
-    grid-gap:2em;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-gap:2em; */
 } 
 .skill-list > div{
 
@@ -102,9 +102,9 @@ nav{
 }
 
 .skill-list img{
-    background-color: #FFFFFF;
-    /* width: 50%;
-    height: 50%; */
+    /* background-color: #FFFFFF; */
+    /* width: 100%;
+    height: 100%;  */
 }
 
 .skills-list{
@@ -118,7 +118,7 @@ nav{
 }
 
 .skill-name{
-    display: block;
+    display: none;
     padding-top: 9px;
     /* padding-left: 60px; */
     font-size: 49px;
