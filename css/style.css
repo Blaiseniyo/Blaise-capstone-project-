@@ -5,22 +5,21 @@
 
 body{
     background-color: #CFC7C7;
-     position: relative;
+    position: relative;
 }
 
 nav{
     width: 100;
     margin: 3px;
+    border-bottom: 6px solid black;
 }
 
 .box-1{
-    margin-top: 25px;
-    margin-right: 50px;
-    margin-left: 50px;
-    /* position: absolute; */
-    width: 1259px;
-    height: 2554.67px;
-
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    width: 90%;
+    height: auto;
     background: #FFFFFF;
 }
 
@@ -37,7 +36,9 @@ nav{
     background: rgb(226,226,226); 
 } */
 
+
 .container{
+    position: relative;
     width: 80%;
     margin: auto;
     padding: 70px;
@@ -89,8 +90,10 @@ nav{
 }
 
 .skill-list{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(5,1fr); */
     /* grid-gap:2em; */
 } 
 .skill-list > div{
@@ -170,12 +173,12 @@ nav{
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.wrapper{
-    /* display: grid;
+.wrapper-1{
+    display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap:2em; */
-    display: flex;
-    flex-direction: column;
+    grid-gap:2em;
+    /* display: flex;
+    flex-direction: column; */
     
 }
 .wrapper {
@@ -190,7 +193,7 @@ nav{
 } */
 
 .wrapper img {
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
@@ -227,7 +230,7 @@ nav{
 }
 button{
     border-radius: 20px;
-    width: 100%;
+    width: 20%;
     padding: 15px;
     background: rgb(237, 44, 73);
     color: white;
@@ -244,6 +247,50 @@ button{
 }
 
 
+#about h5{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 28px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+#contact form label{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+}
+
+#contact form label[for='message']{
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#contact form input[name='name']{
+    width: 40%;
+    height: 30;
+}
+
+#contact form input[name='message']{
+    width: 40%;
+    height: 80;
+}
+
+#contact form input{
+    border-radius: 6px;
+}
+
+#contact form button{
+    display: block;
+    background-color: #007AB9;
+    padding: 10px;
+    margin-top: 13px;
+}
 
 
 
