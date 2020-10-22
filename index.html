@@ -18,9 +18,9 @@
                             <h4>Blaise'Blog</h4>
                         </div>
                         <ul class="nav-links">
-                            <li> <a href="#home">Home</a></li>
-                            <li> <a href="#">Blog</a></li>
-                            <li class="active"> <a href="#">login</a></li>
+                            <div><li> <a href="#home">Home</a></li></div>
+                            <div><li> <a href="#">Blog</a></li></div>
+                            <div><li class="active"> <a href="#">login</a></li></div>
                         </ul>
                         <div class="burger">
                             <div class="line1"></div>
@@ -32,21 +32,21 @@
             </div>
             <div class="container">
                 <div class="sign-in-container">
-                    <div class="form">
-                        <form action="" class="form-group">
-                            <div class="fieldscontainer">
-                                <div class="fieldContainer">
-                                    <i class="fa fa-envelope icon"></i>
-                                    <input type="text" name="emal" placeholder="EMAIL" id="">
-                                </div>
-                                <div class="fieldContainer">
-                                    <i class="fa fa-key icon"></i>
-                                    <input type="password" name="password" placeholder="PASSWORD" id="">
-                                </div>
-                                <button>Sign in</button>
-                            </div>
-                        </form>
-                    </div>
+                    <form action="" class="form-group">
+                        <div class="form-container">
+                            <label><b>EMAIL</b></label>
+                            <input type="text" placeholder="Enter Email" name="email">
+                        
+                            <label><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw">
+                                
+                            <button type="submit">Login</button>
+                            <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                            </label>
+                        </div>
+                    </form>
                 </div>
             </div>
 

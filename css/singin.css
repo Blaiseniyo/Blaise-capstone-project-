@@ -13,14 +13,17 @@ body{
 
 nav{
     display: flex;
-    width: 100%;
-    margin: 3px;
+    justify-content: space-around;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    min-height: 8vh;
+    border-bottom: 1px solid #CFC7C7 ;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .logo{
-    flex: 7;
+    flex: 5;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -30,7 +33,6 @@ nav{
     margin-top: 25px;
     margin-right: 50px;
     margin-left: 50px;
-    /* position: absolute; */
     width: 1259px;
     height: 700px;
 
@@ -41,13 +43,12 @@ nav{
     position: relative;
     width: 80%;
     margin: auto;
-    padding: 70px;
+    padding-top: 70px;
     
 }
 
-.nav-bar{
-    margin-bottom: 15px;
-    display: inline;
+.nav-links a:hover{
+    text-decoration: underline;
 }
 
 .nav-links{
@@ -59,9 +60,6 @@ nav{
 }
 .nav-links li{
     list-style: none;
-    padding: 4px;
-    /* float: right; */
-    text-decoration: none;
 }
 
 .nav-links a{
@@ -75,12 +73,6 @@ nav{
 
 .nav-links a:hover{
     text-decoration: underline;
-}
-
-.nav-bar li{
-    display: inline;
-    padding: 10px;
-    font-weight: 900;
 }
 
 .burger{
@@ -99,66 +91,51 @@ nav{
     background: rgba(68, 94, 235, 0.37);
 }
 
-
-.sign-in-container{
-    display: flex;
-    position: relative;
-    border: 1px solid black;
+.container-2{
     width: 80%;
-    height: 300px;
-    margin-top: 20px;
     margin: auto;
-    padding: 45px;
+    padding: 70px;
+    position: relative;
+    
 }
 
-.form-group{
-    position: absolute;
-    top: 50px;
-    left: 160px;
-}
-
-.form-group input{
-    flex: 1;
-    font-size: 30px;
-    font-weight: 800;
-    display: block;
-    margin-bottom: 40px;
+input[type=text], input[type=password] {
     width: 100%;
-    height: 65.76px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 0px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.form-group button{
-    margin-left:140px ;
+.container-2{
+    width: 80%;
+    margin: auto;
+    padding: 70px;
+    position: relative;
+    
+}
+
+button {
+    background-color: rgb(4, 74, 102);
     color: white;
-    font-family: Roboto;
-    font-weight: normal;
-    font-size: 28px;
-    background-color: #445EEB;
-    Width:182px;
-    Height:60px;
-    border-radius: 4px;
-}
-
-.fieldContainer {
-    display: flex;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
     width: 100%;
-    margin-bottom: 15px;
- }
+}
 
- .icon {
-    font-size: 30px;
-    padding-top: 20px;
-    background: rgb(11, 9, 116);
-    color: white;
-    width: 40px;
-    height: 45.76px;
-    text-align: center;
- }
- .form{
-    background-color: red;
+button:hover {
+    opacity: 0.8;
+}
+
+.form-container {
+    padding: 16px;
+}
+
+.hide{
+    display: none;
 }
 
  @media screen and (max-width:1024px){
@@ -167,10 +144,10 @@ nav{
     }
 }
 
-@media screen and (max-width:871px){
+@media screen and (max-width:1200px){
     body{
         background-color: #ffffff;
-         position: relative;
+         overflow-x: hidden;
     }
 
     .box-1{
@@ -184,144 +161,22 @@ nav{
         background: #FFFFFF;
     }
     .container{
-        position: relative;
-
-        /* padding: 70px; */
-        
+        position: relative;   
     }
 
-}
- 
-@media screen and (max-width:768px){
-    body{
-
-        /* display: none; */
-
-    }
-
-    .form{
-        background-color: red;
-    }
-    .fieldsContainer{
-        /* background-color: red; */
-       
-        left: 100%;
-        position: absolute;
-    }
-    .fieldsContainer button{
-        position: relative;
-        width: 60%;
-        right: 70px;
-    }
-
-    .sign-in-container{
-        background-color: red;
-        position: relative;
-    }
-    .form-group input{
-        flex: 1;
-        font-size: 30px;
-        font-weight: 800;
-        display: block;
-        margin-bottom: 40px;
-        /* width: 80%; */
-        height: 65.76px;
-        padding-left: 30px;
-        padding-right: 30px;
-        border-radius: 0px;
-    }
-    .nav-active{
-        transform: translateX(0%);
-    }
-
-    .nav-links li{
-        opacity: 0;
-    }
-    .burger{
-        display: block;
-    }
     .nav-links{
         position: absolute;
-        right: 0px;
+        right: -90px;
         height: 92vh;
         top: 8vh;
-        background-color: #FFFFFF;
+        background-color: #CFC7C7 ;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.0s ease-in;
     }
-
-}
-
-
-
-
-
-
-
-
-
-/*
-    body{
-        overflow-x: hidden;
-        margin: 0px;
-        padding: 0px;
-        overflow-x: visible;
-    }
-    .nav-links{
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: #FFFFFF;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-
-    .sign-in-container{
-        overflow: hidden;
-        display: flex;
-        display: block;
-        position: relative;
-        border: 1px solid black;
-        width: 100%;
-        height: 300px;
-        margin-top: 20px;
-        padding: 0px;
-    }
-
-    .form{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    .form-group input{
-        position: absolute;
-        flex: 1;
-        font-size: 30px;
-        font-weight: 800;
-        display: block;
-        margin-bottom: 40px;
-        width: 60%;
-        height: 65.76px;
-        padding-left: 0px;
-        padding-right: 0px;
-        border-radius: 0px;
-    }
-
-    .fieldContainer {
-        display: flex;
-        width: 100%;
-        margin-bottom: 15px;
-     }
     .nav-links li{
         opacity: 0;
     }
@@ -332,7 +187,7 @@ nav{
 
 .nav-active{
     transform: translateX(0%);
-}  */
+}
 
 @keyframes navLinkFade{
     from{
