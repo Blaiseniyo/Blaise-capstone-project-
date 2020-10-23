@@ -6,7 +6,7 @@ const navSlide = () => {
 
     burger.addEventListener('click', () => {
         //Toggle nav
-        document.querySelector('.form-container').classList.toggle('hide');
+        //document.querySelector('.form-container').classList.toggle('hide');
         nav.classList.toggle('nav-active')
             //Animate links
     navLinks.forEach((link,index) => {
@@ -20,7 +20,6 @@ const navSlide = () => {
     burger.classList.toggle('toggle');
 
     });
-
 }
 
 navSlide();
