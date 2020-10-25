@@ -198,31 +198,6 @@ nav{
 }
 
 
-.wrapper-1{
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-    grid-gap:2em;
-    
-}
-.wrapper {
-    width: 80%;
-    border: 2px solid lightgray;
-    box-shadow: 5px lightgray;
-    text-align: center;
-}
-
-
-.wrapper img {
-    width: 100%;
-    height: auto;
-}
-
-.paragraph{
-    padding-top:8px;
-}
-.labels {
-    display: inline-flex;
-}
 
 #html-label {
     color: lightgreen;
@@ -285,6 +260,17 @@ button{
     display: block;
     margin-top: 3px;
     margin-bottom: 3px;
+}
+
+#contact form label[for='email']{
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#contact form input[name='email']{
+    width: 40%;
+    height: 30;
 }
 
 #contact form input[name='name']{
@@ -396,6 +382,10 @@ button{
         flex-wrap: wrap;
     } 
 
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
     .words{
         flex: 1;
         width: 100%;
@@ -443,7 +433,7 @@ button{
     .container{
         width: 80%;
         margin: auto;
-        padding: auto;
+        padding: 15px;
         
     }
     .top-part{
@@ -454,6 +444,9 @@ button{
         flex-wrap: wrap;
     } 
 
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
     .words{
         flex: 1;
         width: 100%;
