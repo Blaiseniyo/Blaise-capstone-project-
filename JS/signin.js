@@ -1,13 +1,12 @@
 const navSlide = () => {
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
+    const nav = document.querySelector('.links');
     const navLinks = document.querySelectorAll('.nav-links li');
     
 
     burger.addEventListener('click', () => {
         //Toggle nav
-        document.querySelector('.form-container').classList.toggle('hide');
-        nav.classList.toggle('nav-active')
+        nav.classList.toggle('go');
             //Animate links
     navLinks.forEach((link,index) => {
         if (link.style.animation){
