@@ -404,7 +404,18 @@ button{
         overflow-x: hidden;
     }
 
-
+    #contact form label{
+        display: block;
+    }
+    #contact form input[name='email']{
+        width: 80%;
+        height: 30;
+    }
+    
+    #contact form input[name='name']{
+        width: 80%;
+        height: 30;
+    }
     .container{
         width: 80%;
         margin: auto;
