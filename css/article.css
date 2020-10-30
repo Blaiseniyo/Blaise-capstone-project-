@@ -140,26 +140,38 @@ article img{
     display: block;
     font-weight: bold;
     margin: 10px;
+    font-size: 20px;
 }
 
 .comments form input{
-    margin: 10px;
+    margin-left: 10px;
+    width: 50%;
+    height: 30;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
 
-/* .text{
-    padding: 0 20px 20px;
+textarea{
+    margin-left: 10px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    width: 80%;
+    border: 2px solid #ccc;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
-.text >button{
-    background: linear-gradient(to right,#f030a7,#f03061);
-    border-radius: 3px;
-    border:none;
+
+.comments form button{
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgb(4, 74, 102);
     color: white;
-    padding: 10px;
-    width: 100%;
-    font-weight: 600;
-    text-shadow: 2px 2px 6px 0px rgba(0, 0, 0,0.3);
-    text-transform: uppercase;
-} */
+    padding: 14px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
+}
 
 #fotter{
     border-top: 2px solid #CFC7C7;
@@ -212,18 +224,8 @@ article img{
     .links{
         flex-direction: column;
         gap: 20px;    }
-    .grid{
-        grid-template-columns: repeat(2,1fr);
-    }
     .burger{
         display: block;
-    }
-}
-
-@media screen and (max-width:500px){
-    .grid{
-        grid-template-columns: repeat(1,1fr);
-        text-align: center;
     }
 }
 
