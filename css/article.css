@@ -101,30 +101,52 @@ nav{
 main{
     margin-bottom: 30px;
 }
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 30px;
-    align-items: center;
-}
 
-.grid > article{
+article{
     border: 1px solid #ccc;
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
     border-radius: 3px;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+article h3{
     text-align: center;
 }
 
-.grid >article:hover{
+
+article img{
+    width: 100%;
+}
+.comment{
+    border: 1px solid #ccc;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.comment:hover{
     transition: transform .1s ease-out;
     transform: translateX(5px);
 }
 
-.grid > article img{
-    width: 100%;
+.comments{
+    margin-top: 60px;
 }
 
-.text{
+
+.comments form label{
+    display: block;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.comments form input{
+    margin: 10px;
+}
+
+/* .text{
     padding: 0 20px 20px;
 }
 .text >button{
@@ -137,7 +159,7 @@ main{
     font-weight: 600;
     text-shadow: 2px 2px 6px 0px rgba(0, 0, 0,0.3);
     text-transform: uppercase;
-}
+} */
 
 #fotter{
     border-top: 2px solid #CFC7C7;
