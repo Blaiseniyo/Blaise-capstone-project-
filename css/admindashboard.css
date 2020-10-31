@@ -137,8 +137,14 @@ article img{
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    align-items: center;
+}
+
+.grid >article:hover{
+    transition: transform .1s ease-out;
+    transform: translateX(5px);
 }
 .post form label{
     display: block;
@@ -146,7 +152,6 @@ article img{
     margin: 10px;
     font-size: 20px;
 }
-
 .post form input[type='text']{
     margin-left: 10px;
     width: 50%;
@@ -170,7 +175,14 @@ textarea{
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
 
-.post form button[type='submit']{
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button{
     margin-left: 10px;
     margin-top: 10px;
     background-color: rgb(4, 74, 102);
@@ -193,6 +205,13 @@ textarea{
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
 
+.update{
+    background-color: rgb(4, 74, 102);
+}
+
+.delete{
+    background-color: #b50012;
+}
 #fotter{
     border-top: 2px solid #CFC7C7;
     background-color: black;
@@ -240,7 +259,9 @@ textarea{
     .nav-links{
         flex-direction: column;
     }
-
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
     .links{
         flex-direction: column;
         gap: 20px;    }
@@ -249,6 +270,12 @@ textarea{
     }
 }
 
+@media screen and (max-width:540px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
+    }
+}
 
 @keyframes navLinkFade{
     from{

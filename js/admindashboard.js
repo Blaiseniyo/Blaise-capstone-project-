@@ -2,12 +2,13 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.links');
     const navLinks = document.querySelectorAll('.nav-links li');
+    const update =document.querySelector('.active');
+    const dele=document.querySelector('.delete');
     
 
     burger.addEventListener('click', () => {
         //Toggle nav
         nav.classList.toggle('go');
-        // nav.classList.toggle('nav-active');
             //Animate links
     navLinks.forEach((link,index) => {
         if (link.style.animation){
@@ -18,6 +19,10 @@ const navSlide = () => {
     });
     //Burger animation
     burger.classList.toggle('toggle');
+
+    update.addEventListener('click',() =>{
+        document.querySelector('.title').insertAdjacentText='How start with machine learning'
+    })
 
     });
 }
