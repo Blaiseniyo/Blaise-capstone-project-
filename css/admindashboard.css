@@ -143,7 +143,7 @@ article img{
     font-size: 20px;
 }
 
-.post form input{
+.post form input[type='text']{
     margin-left: 10px;
     width: 50%;
     height: 30;
@@ -153,7 +153,8 @@ article img{
 }
 
 .post form input[type='file']{
-    
+    display: block;
+    margin-left: 10px;
 }
 
 textarea{
@@ -165,11 +166,22 @@ textarea{
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
 
-.post form button{
-    display: block;
+.post form button[type='submit']{
     margin-left: 10px;
     margin-top: 10px;
     background-color: rgb(4, 74, 102);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
+}
+
+.cancel{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #b50012;
     color: white;
     padding: 14px 20px;
     border-radius: 6px;
