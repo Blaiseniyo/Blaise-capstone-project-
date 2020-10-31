@@ -135,7 +135,11 @@ article img{
     margin-top: 60px;
 }
 
-
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
 .post form label{
     display: block;
     font-weight: bold;
