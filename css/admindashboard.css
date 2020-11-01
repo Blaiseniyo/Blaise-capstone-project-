@@ -247,6 +247,12 @@ button{
     }
 }
 
+@media screen and (max-width:875px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
 @media screen and (max-width:768px){
     
     nav{
@@ -259,9 +265,6 @@ button{
     .nav-links{
         flex-direction: column;
     }
-    .grid{
-        grid-template-columns: repeat(2,1fr);
-    }
     .links{
         flex-direction: column;
         gap: 20px;    }
@@ -270,7 +273,7 @@ button{
     }
 }
 
-@media screen and (max-width:540px){
+@media screen and (max-width:636px){
     .grid{
         grid-template-columns: repeat(1,1fr);
         text-align: center;
