@@ -2,7 +2,7 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.links');
     const navLinks = document.querySelectorAll('.nav-links li');
-    const update =document.querySelector('.active');
+    const update =document.querySelector('.update');
     const dele=document.querySelector('.delete');
     
 
@@ -20,11 +20,31 @@ const navSlide = () => {
     //Burger animation
     burger.classList.toggle('toggle');
 
-    update.addEventListener('click',() =>{
-        document.querySelector('.title').insertAdjacentText='How start with machine learning'
-    })
+    // update.addEventListener('click',() =>{
+    //     document.getElementById("title").value='none';
+    // })
 
     });
 }
 
+// document.getElementById('help').addEventListener('click', () => {
+//     console.log('clicked')
+// });
+
+// const update =() =>{
+//     const btns = document.querySelectorAll(".update");
+//     const dele = document.querySelectorAll("delete");
+
+//     btns.forEach((btn,index) =>{
+//         btn.addEventListener('click',() => {
+//             document.getElementById('title').value="Blaise";
+//         })
+//     })
+//     dele.forEach((btn,index) =>{
+//         btn.addEventListener('click',() => {
+//             prompt('people');
+//         })
+//     })
+//     }
 navSlide();
+// update();
