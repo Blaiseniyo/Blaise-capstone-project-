@@ -1,38 +1,16 @@
-const update =() =>{
-    const btns = document.querySelectorAll(".update");
-    const dele = document.querySelectorAll(".delete");
-    const dele1 = document.querySelector(".delete1");
-
-    btns.forEach((btn,index) =>{
-        btn.addEventListener('click',() => {
-            document.getElementById('title').value="Blaise"
-        })
+const form=document.querySelector('#new-post');
+form.addEventListener('submit', e =>{
+    e.preventDefault();
+    db.collection('posts').add({
+        title:form.title.value,
+        content:form.content.value,
+        image:'../Image/blog1.jpg'
     })
-    dele.forEach((btn,index) =>{
-                btn.addEventListener('click',() => {
-                    setTimeout(()=>{
-                        if (confirm('do you want to delete thi post')){
-                             console.log('you deleted the post')
-                        } ;
-                     },0)
-                })
-            })
-    // dele1.addEventListener('click', ()=>{
-    //     setTimeout(()=>{
-    //         if (confirm('do you want to delete thi post')){
-    //              console.log('you deleted the post')
-    //         } ;
-    //      },2000)
-    // })
-}
 
+    document.querySelector('[name= title]').value=' ';
+    document.querySelector('[name= content]').value=' ';
 
-// document.querySelector('.cancel').addEventListener('click', () =>{
-//     setTimeout(()=>{
-//        if (confirm('do you want to delete thi post')){
-//             console.log('you deleted the post')
-//        } ;
-//     },2000)
-// });
-// navSlide();
-update();
+    setTimeout(()=>{
+        window.location.href='posts.html';
+    },1500)
+})
