@@ -1,21 +1,6 @@
-const update =() =>{
-    const dele = document.querySelectorAll(".delete");
-
-    dele.forEach((btn,index) =>{
-                btn.addEventListener('click',() => {
-                    setTimeout(()=>{
-                        if (confirm('do you want to delete thi post')){
-                             console.log('you deleted the post')
-                        } ;
-                     },0)
-                })
-            })
-}
-update();
-
 const posts=document.querySelector('.grid');
 
-// creating alement and render posts
+// creating element and render posts
 
 function renderPosts(doc){
     let article = document.createElement('article');
@@ -50,14 +35,12 @@ function renderPosts(doc){
         e.stopPropagation();
         if (confirm("By deleting this post, It is going to be permanently removed from our server")){
             const id=e.target.parentNode.parentNode.parentNode.getAttribute('post-id');
-            // console.log(id);
             db.collection('posts').doc(id).delete();
        } ;
     })
 
     btn1.addEventListener('click',e=>{
         const id=e.target.parentNode.parentNode.parentNode.getAttribute('post-id');
-        // const post =db.collection('post').doc(id).get();
         window.location.href=`update.html#${id}`;
 
     })
@@ -70,7 +53,7 @@ function renderPosts(doc){
 //     })
 // })
 
-
+// Real time load of data from the firebase
 db.collection('posts').onSnapshot(snpashot =>{
     let changes =snpashot.docChanges();
     changes.forEach(change =>{
@@ -83,5 +66,3 @@ db.collection('posts').onSnapshot(snpashot =>{
         }
     })
 })
-
-// adding data to firebase
