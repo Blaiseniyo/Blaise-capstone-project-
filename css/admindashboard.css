@@ -119,6 +119,10 @@ article h3{
 article img{
     width: 100%;
 }
+
+.post2 img{
+    height: 50%;;
+}
 .comment{
     border: 1px solid #ccc;
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
@@ -221,6 +225,16 @@ button{
     justify-content: space-between;
 }
 
+/* .text{
+    position: relative;
+} */
+/* .content2{
+    line-height: 16px;
+} */
+.show{
+    display: none;
+}
+
 #fotter a{
     display: block;
     text-align: center;
@@ -244,6 +258,10 @@ button{
         color: rgb(0, 0, 0);
         text-transform: uppercase;
         font-size: 16px;
+    }
+
+    .post2 img{
+        height: 30%;;
     }
 }
 
@@ -277,6 +295,12 @@ button{
     .grid{
         grid-template-columns: repeat(1,1fr);
         text-align: center;
+    }
+}
+
+@media screen and (max-width:375px){
+    .post2 img{
+        height: 30%;;
     }
 }
 

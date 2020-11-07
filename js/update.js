@@ -25,5 +25,5 @@ form.addEventListener('submit', e =>{
 
     setTimeout(()=>{
         window.location.href='posts.html';
-    },1500)
+    },2000)
 })

@@ -41,7 +41,7 @@ function renderPosts(doc){
 
     btn1.addEventListener('click',e=>{
         const id=e.target.parentNode.parentNode.parentNode.getAttribute('post-id');
-        window.location.href=`update.html#${id}`;
+        window.location.href=`newpost.html#${id}`;
 
     })
 }
