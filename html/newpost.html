@@ -5,6 +5,7 @@
         <link type="text/css" rel="stylesheet" href="../CSS/admindashboard.css">
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
         <title>capstone project</title>
     </head>
     <body>
@@ -44,9 +45,10 @@
                             <label for="">content</label>
                             <textarea name="content" id="content" cols="30" rows="15" class="content"></textarea>
                             <label for="">Upload the article's cover picture</label>
-                            <input type="file" name="image" id="">
+                            <input type="file" name="image" id="cover-image">
                             <button>Create</button>
                         </form>
+                        <img  class="form-imaga" src="" alt="">
                     </article>
                     <!-- <div class="post2 show">
                         <article>
@@ -109,6 +111,7 @@
             firebase.initializeApp(firebaseConfig);
             // firebase.analytics();
             const db=firebase.firestore();
+            const str =firebase.storage();
             db.settings({ timestampsInSnapshots: true});
             </script>
         <script src="../js/admindashboard.js"></script>
