@@ -29,7 +29,8 @@ function renderArticle(article){
     const image=document.querySelector('.image');
     title.textContent=article.title;
     content.textContent=article.content;
-    image.scr=article.image;
+    console.log(article.image);
+    image.src=article.image;
 }
 
 db.collection('posts').doc(id).get().then((article)=>{
