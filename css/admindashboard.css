@@ -34,7 +34,7 @@ nav{
 }
 
 .logo{
-    flex: 3;
+    flex: 2;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -48,7 +48,7 @@ nav{
 }
 
 .nav-links{
-    flex: 7;
+    flex: 8;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -70,6 +70,7 @@ nav{
 
 .links-1{
     flex:5;
+    font-size: 7px;
 }
 
 .links{
@@ -225,12 +226,57 @@ button{
     justify-content: space-between;
 }
 
-/* .text{
-    position: relative;
-} */
-/* .content2{
-    line-height: 16px;
-} */
+.msg{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.msg > div{
+    margin-bottom: 20px;
+    padding:10px ;
+    padding-bottom:5px ;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
+}
+
+.msg > div:hover{
+    transition: transform .1s ease-out;
+    transform: translateX(5px);
+}
+
+.test{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.message{
+    margin-left: 10px;
+}
+
+.test p{
+    display: inline;
+}
+.msg > div .name-1{
+    margin-bottom: 90px;
+}
+.msg .name-1,.label,.date{
+    display: inline;
+}
+.reply{
+    float: right;
+    
+}
+.reply a{
+    color: 007AB9;
+    text-decoration: none;
+}
+
+.reply a:hover{
+   text-decoration: underline;
+}
 .show{
     display: none;
 }
@@ -251,13 +297,6 @@ button{
         width: 100%;
         height: auto;
         background: #FFFFFF;
-    }
-
-    .logo{
-        flex: 5;
-        color: rgb(0, 0, 0);
-        text-transform: uppercase;
-        font-size: 16px;
     }
 
     .post2 img{
@@ -304,6 +343,11 @@ button{
     }
 }
 
+
+@media screen and (max-width:280px){
+    .logo{
+        font-size: 20px;}
+}
 @keyframes navLinkFade{
     from{
         opacity: 0;
