@@ -5,6 +5,7 @@
         <link type="text/css" rel="stylesheet" href="../CSS/admindashboard.css">
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
         <title>capstone project</title>
     </head>
     <body>
@@ -20,11 +21,11 @@
                                 <ul class="go links">
                                     <div><li> <a href="../index.html">Home</a></li></div>
                                     <div><li> <a href="blog.html">Blog</a></li></div>
-                                    <div><li> <a href="newpost.html">new post</a></li></div>
-                                    <div><li> <a href="posts.html">post</a></li></div>
-                                    <div><li> <a href="message.html">Message</a></li></div>
-                                    <div><li> <a href="profile.html">profile</a></li></div>
-                                    <div><li > <a href="signout.html">logout</a></li></div>
+                                    <div><li class="logged-in"> <a href="newpost.html">new post</a></li></div>
+                                    <div><li class="logged-in"> <a href="posts.html">post</a></li></div>
+                                    <div><li class="logged-in"> <a href="message.html">Message</a></li></div>
+                                    <div><li class="logged-in"> <a href="profile.html">profile</a></li></div>
+                                    <div><li class="logged-in" id="log-out"> <a href="#">logout</a></li></div>
                                 </ul>
                             </div>
                         </nav>
@@ -154,5 +155,6 @@
         </script>
         <script src="../js/admindashboard.js"></script>
         <script src="../js/posts.js"></script>
+        <script src="../js/auth-signout.js"></script>
     </body>
 </html>
