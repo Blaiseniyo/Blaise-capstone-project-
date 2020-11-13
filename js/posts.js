@@ -14,6 +14,7 @@ function renderPosts(doc){
 
     article.setAttribute('post-id',doc.id);
     image.src=doc.data().image;
+    image.style.height='150px'
     title.textContent=doc.data().title;
     const content2 = doc.data().content;
     content.textContent=content2.substring(0,50);
