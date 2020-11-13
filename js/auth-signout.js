@@ -2,7 +2,7 @@ auth.onAuthStateChanged(user =>{
     if(user){
         console.log('uesr logged in');
     }else{
-        console.log('uesr logged out');
+        window.location.href='signin.html';
     }
 })
 
