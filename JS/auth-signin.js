@@ -41,13 +41,6 @@ function validEmail(){
     }
 }
 
-auth.onAuthStateChanged(user =>{
-    if(user){
-        console.log('uesr logged in');
-    }else{
-        console.log('uesr logged out');
-    }
-})
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -58,8 +51,8 @@ form.addEventListener('submit',(e)=>{
     if(email ===1 && password === 1){
         auth.signInWithEmailAndPassword(form.email.value,form.password.value).then((res)=>{
             document.querySelector('.error-message').style.display='none';
-            console.log(res.user)
             form.reset();
+            window.location.href='blog.html';
         }).catch((error)=>{
             document.querySelector('.error-message').style.display='block';
         })
