@@ -26,7 +26,12 @@ body{
     
 }
 
-
+.container-2{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    
+}
 nav{
     min-height: 8vh;
     margin-bottom: 0px;
@@ -166,13 +171,14 @@ article img{
     transition: transform .1s ease-out;
     transform: translateX(5px);
 }
-.post form label{
+.post form label, .profile-1 form label{
     display: block;
     font-weight: bold;
     margin: 10px;
     font-size: 20px;
 }
-.post form input[type='text']{
+
+.post form input[type='text'],.profile-1 form input[type='text']{
     margin-left: 10px;
     width: 50%;
     height: 30;
@@ -181,11 +187,41 @@ article img{
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
 
-.post form input[type='file']{
+.post form input[type='file'],.profile-1 form input[type='file']{
     display: block;
     margin-left: 10px;
 }
 
+.profile-1 img, .skil-1 img{
+    display: block;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.profile-btn{
+    display: block;
+} 
+
+.skil-1 form input[type='text'] {
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 75%;
+    height: 30;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
+}
+
+.remove{
+    background-color: red;
+    width: 75%;
+    align-items: center;
+    color: #FFFFFF;
+    height: 40px;
+}
 textarea{
     margin-left: 10px;
     background: rgba(0, 0, 0, 0);
@@ -229,8 +265,22 @@ button{
     background-color: rgb(4, 74, 102);
 }
 
-.delete{
-    background-color: #b50012;
+
+.skill-project{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-1 textarea{
+   
+}
+
+.bbtn{
+    margin-top: 15px;
+    margin-left: 55px;
+    float: right;
 }
 #fotter{
     border-top: 2px solid #CFC7C7;
