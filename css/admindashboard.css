@@ -203,6 +203,10 @@ article img{
     display: block;
 } 
 
+.save{
+    display: none;
+}
+
 .skil-1 form input[type='text'] {
     display: block;
     margin-left: 10px;
@@ -273,8 +277,8 @@ button{
     align-items: center;
 }
 
-.project-1 textarea{
-   
+.skill-project h5{
+   margin-left: 50px;
 }
 
 .bbtn{

@@ -43,26 +43,26 @@
                 <main class=" flex" >
                     <article class="profile-1">
                         <h2>Profile</h2>
-                        <form action="">
+                        <form action="" class="profile-form">
                             <label for="fname">First name</label>
-                            <input class="profile" type="text" name="fname" value="Blaise">
+                            <input class="profile" type="text" name="fname" >
                             <label for="lname">last name</label>
-                            <input  class="profile" type="text" name="lname" value="Niyonkuru">
+                            <input  class="profile" type="text" name="lname" >
                             <img src="" alt="profile-pic" class="profile-pic" style="width: 140px; height:120px;">
-                            <input  class="profile" type="file">
+                            <input id="pic" class="profile" type="file">
                             <label for="description">Description</label>
                             <textarea class="profile" type="text" name="description" style="width: 50%; height: 130px;" cols="30" rows="15"></textarea>
                             <label for="about">About</label>
                             <textarea class="profile" type="text" name="about" style="width: 50%; height: 130px;" cols="30" rows="15"></textarea>
-                            <button class=" profile-btn" type="submit">Save</button>
+                            <button class=" profile-btn save" type="submit">Save</button>
                         </form>
                     </article>
                     <article class="skil-1">
                         <h2>Skills</h2>
-                        <form action="" class="skill-project container-2">
-                            <div>
+                        <form action="" class="skill-project container-2 skill-form">
+                            <!-- <div>
                                 <img src="" alt="profile-pic" class="skill-pic" style="width: 140px; height:120px;">
-                                <input type="text" name="skill-1">
+                                <h5>Python</h5>
                                 <button class="remove">Remove</button>
                             </div>
                             <div>
@@ -79,15 +79,15 @@
                                 <img src="" alt="profile-pic" class="skill-pic" style="width: 140px; height:120px;">
                                 <input type="text" name="skill-1">
                                 <button class="remove">Remove</button>
-                            </div>
+                            </div> -->
                         </form>
-                        <button class=" profile-btn bbtn" type="submit">Save</button>
-                        <button class=" project-btn bbtn" type="submit">Add</button>
+                        <button class=" profile-btn bbtn save-2" type="submit" style="display: none;">Save</button>
+                        <button class=" project-btn bbtn add-1" type="submit">Add</button>
                      </article>
                      <article class=" profile-1">
                         <h2>project</h2>
-                        <form action="" class="skill-project container-2">
-                            <div>
+                        <form action="" class="skill-project container-2 project-form">
+                            <!-- <div>
                                 <img src="" alt="project-pic" class="project-pic" style="width: 140px; height:120px;">
                                 <textarea class="project" type="text" name="description"  cols="6" rows="8"></textarea>
                                 <button class="remove">Remove</button>
@@ -101,10 +101,10 @@
                                 <img src="" alt="project-pic" class="project-pic" style="width: 140px; height:120px;">
                                 <textarea class="project" type="text" name="description"  cols="6" rows="8"></textarea>
                                 <button class="remove">Remove</button>
-                            </div>
+                            </div> -->
                         </form>
-                        <button class=" project-btn bbtn" type="submit">Save</button>
-                        <button class=" project-btn bbtn" type="submit">Add</button>
+                        <button class=" project-btn bbtn save-3" type="submit" style="display: none;">Save</button>
+                        <button class=" project-btn bbtn add-2" type="submit">Add</button>
                      </article>
                 </main>
             </div>
@@ -150,6 +150,8 @@
         <script src="../js/admindashboard.js"></script>
         <!-- <script src="../js/auth.js"></script> -->
         <script src="../js/auth-signout.js"></script>
-        <!-- <script src="../js/posts.js"></script> -->
+        <script src="../js/profile.js"></script>
+        <script src="../js/skills.js"></script>
+        <script src="../js/projects.js"></script>
     </body>
 </html>
