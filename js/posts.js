@@ -18,9 +18,9 @@ function renderPosts(doc){
     title.textContent=doc.data().title;
     const content2 = doc.data().content;
     content.textContent=content2.substring(0,50);
-    btn1.setAttribute('class','update');
+    btn1.classList.add('update');
     btn1.textContent='Update';
-    btn2.setAttribute('class','delete');
+    btn2.classList.add('delete');
     btn2.textContent='Delete';
     div2.setAttribute('class','btn'); 
     div2.appendChild(btn1);

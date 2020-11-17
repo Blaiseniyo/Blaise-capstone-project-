@@ -127,7 +127,7 @@ article img{
 }
 
 .post2 img{
-    height: 50%;;
+    height: 65%;;
 }
 .comment{
     border: 1px solid #ccc;
@@ -269,6 +269,9 @@ button{
     background-color: rgb(4, 74, 102);
 }
 
+.delete{
+    background-color: #b50012;
+}
 
 .skill-project{
     display: flex;
@@ -369,7 +372,7 @@ button{
     }
 
     .post2 img{
-        height: 30%;;
+        height: 45%;;
     }
 }
 
@@ -406,6 +409,11 @@ button{
     }
 }
 
+@media screen and (max-width:414px){
+    .post2 img {
+        height: 30%;
+    }
+}
 @media screen and (max-width:375px){
     .post2 img{
         height: 30%;;

@@ -53,7 +53,7 @@ if (location.hash){
     })
     post.addEventListener('click', ()=>{
         if (changed){
-            let storageRef = str.ref('images/'+ fil.name);
+            let storageRef = str.ref(`images/${fil.name}${form.title.value}`);
             db.collection('posts').doc(id).get().then((article)=>{
                 let im =str.refFromURL(article.data().image);
                 im.delete().then(()=>{
@@ -141,7 +141,7 @@ if (location.hash){
     post.addEventListener('click', ()=>{
         if(changed){
             console.log(fil.name)
-            let storageRef = str.ref('images/'+ fil.name);
+            let storageRef = str.ref(`images/${fil.name}${form.title.value}`);
             storageRef.put(fil).then((snapshot)=>{
                 storageRef.getDownloadURL().then(url =>{
                    db.collection('posts').add({
