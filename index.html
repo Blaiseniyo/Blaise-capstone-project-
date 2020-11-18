@@ -4,8 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <title>capstone project</title>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     </head>
-
     <body>
         <div class="box-1">
             <div id="home">
@@ -88,7 +89,7 @@
                     <h2 class="header">PROJECTS</h2>
                     <main class="grid">
                         <article>
-                            <img src="images/project1.JPG" alt="">
+                            <img src="images/project4.JPG" alt="">
                             <div class="text">
                                 <h3>KFDS</h3>
                                 <p>KFDS(Kigali Food Drinkes Services) this is a project That aims at allowing restaurants in Kigali to recieve orders and payments from thier customer"s phone without physical contact </p>
@@ -130,7 +131,7 @@
                 <div class="container">
                     <h2 class="header">CONTACT</h2>
                     <p>If you have any question,problem or any suggestion to us. Please send us a message and we will answer as soon as possible </p>
-                    <form action="">
+                    <form action="" class="form-msg">
                         <label for="name">Name:</label>
                         <input type="text" name="name">
                         <label  for="email">Email:</label>
@@ -165,6 +166,26 @@
                 <a href="https://icons8.com/icon/63777/github">GitHub icon by Icons8</a>
             </div>
         </div>
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyCmPR6YHmQw1hLT8T0HB01L7SOvIY_xPA4",
+                authDomain: "capstone-project-1e83a.firebaseapp.com",
+                databaseURL: "https://capstone-project-1e83a.firebaseio.com",
+                projectId: "capstone-project-1e83a",
+                storageBucket: "capstone-project-1e83a.appspot.com",
+                messagingSenderId: "297100326319",
+                appId: "1:297100326319:web:d80f33cae8f31705272b5a",
+                measurementId: "G-39J7GQCCHQ"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db=firebase.firestore();
+            db.settings({ timestampsInSnapshots: true});
+        </script>
         <script src="js/landing-page.js"></script>
+        <script src="js/messages.js"></script>
     </body>
 </html>
+

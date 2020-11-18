@@ -4,8 +4,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link type="text/css" rel="stylesheet" href="../css/singin.css">
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
         <title>capstone project</title>
     </head>
@@ -69,13 +67,10 @@
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
             // firebase.analytics();
-            const db=firebase.firestore();
-            const str =firebase.storage();
             const auth =firebase.auth();
-            db.settings({ timestampsInSnapshots: true});
         </script>
-        <script src="../js/signin.js"></script>
-        <script src="../JS/auth2.js"></script>
+        <script src="../js/admindashboard.js"></script>
         <script src="../js/auth-signin.js"></script>
+        <script src="../JS/auth2.js"></script>
     </body>
 </html>

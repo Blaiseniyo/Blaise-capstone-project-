@@ -26,7 +26,12 @@ body{
     
 }
 
-
+.container-2{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    
+}
 nav{
     min-height: 8vh;
     margin-bottom: 0px;
@@ -34,7 +39,7 @@ nav{
 }
 
 .logo{
-    flex: 7;
+    flex: 2;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -48,7 +53,7 @@ nav{
 }
 
 .nav-links{
-    flex: 7;
+    flex: 8;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -70,6 +75,7 @@ nav{
 
 .links-1{
     flex:5;
+    font-size: 7px;
 }
 
 .links{
@@ -118,7 +124,10 @@ article h3{
 
 article img{
     width: 100%;
-    height: 50%;
+}
+
+.post2 img{
+    height: 65%;;
 }
 .comment{
     border: 1px solid #ccc;
@@ -136,15 +145,40 @@ article img{
     margin-top: 60px;
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    align-items: center;
+}
 
-.comments form label{
+.grid >article:hover{
+    transition: transform .1s ease-out;
+    transform: translateX(5px);
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* align-items: center; */
+}
+
+.edit{
+    float: right;
+}
+.grid >article:hover{
+    transition: transform .1s ease-out;
+    transform: translateX(5px);
+}
+.post form label, .profile-1 form label{
     display: block;
     font-weight: bold;
     margin: 10px;
     font-size: 20px;
 }
 
-.comments form input{
+.post form input[type='text'],.profile-1 form input[type='text']{
     margin-left: 10px;
     width: 50%;
     height: 30;
@@ -153,6 +187,45 @@ article img{
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
 
+.post form input[type='file'],.profile-1 form input[type='file']{
+    display: block;
+    margin-left: 10px;
+}
+
+.profile-1 img, .skil-1 img{
+    display: block;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.profile-btn{
+    display: block;
+} 
+
+.save{
+    display: none;
+}
+
+.skil-1 form input[type='text'] {
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 75%;
+    height: 30;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
+}
+
+.remove{
+    background-color: red;
+    width: 75%;
+    align-items: center;
+    color: #FFFFFF;
+    height: 40px;
+}
 textarea{
     margin-left: 10px;
     background: rgba(0, 0, 0, 0);
@@ -162,8 +235,14 @@ textarea{
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
 
-.comments form button{
-    display: block;
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button{
     margin-left: 10px;
     margin-top: 10px;
     background-color: rgb(4, 74, 102);
@@ -174,6 +253,42 @@ textarea{
     box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
 }
 
+.cancel{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #b50012;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
+}
+
+.update{
+    background-color: rgb(4, 74, 102);
+}
+
+.delete{
+    background-color: #b50012;
+}
+
+.skill-project{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.skill-project h5{
+   margin-left: 50px;
+}
+
+.bbtn{
+    margin-top: 15px;
+    margin-left: 55px;
+    float: right;
+}
 #fotter{
     border-top: 2px solid #CFC7C7;
     background-color: black;
@@ -181,6 +296,61 @@ textarea{
 #fotter .container{
     display: flex;
     justify-content: space-between;
+}
+
+.msg{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.msg > div{
+    margin-bottom: 20px;
+    padding:10px ;
+    padding-bottom:5px ;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-shadow:2px 2px 6px 0px rgba(0, 0, 0,0.3);
+}
+
+.msg > div:hover{
+    transition: transform .1s ease-out;
+    transform: translateX(5px);
+}
+
+.test{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.message{
+    margin-left: 10px;
+}
+
+.test p{
+    display: inline;
+}
+.msg > div .name-1{
+    margin-bottom: 90px;
+}
+.msg .name-1,.label,.date{
+    display: inline;
+}
+.reply{
+    float: right;
+    
+}
+.reply a{
+    color: 007AB9;
+    text-decoration: none;
+}
+
+.reply a:hover{
+   text-decoration: underline;
+}
+.show{
+    display: none;
 }
 
 #fotter a{
@@ -201,11 +371,14 @@ textarea{
         background: #FFFFFF;
     }
 
-    .logo{
-        flex: 5;
-        color: rgb(0, 0, 0);
-        text-transform: uppercase;
-        font-size: 16px;
+    .post2 img{
+        height: 45%;;
+    }
+}
+
+@media screen and (max-width:875px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -221,7 +394,6 @@ textarea{
     .nav-links{
         flex-direction: column;
     }
-
     .links{
         flex-direction: column;
         gap: 20px;    }
@@ -230,7 +402,29 @@ textarea{
     }
 }
 
+@media screen and (max-width:636px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
+    }
+}
 
+@media screen and (max-width:414px){
+    .post2 img {
+        height: 30%;
+    }
+}
+@media screen and (max-width:375px){
+    .post2 img{
+        height: 30%;;
+    }
+}
+
+
+@media screen and (max-width:280px){
+    .logo{
+        font-size: 20px;}
+}
 @keyframes navLinkFade{
     from{
         opacity: 0;
