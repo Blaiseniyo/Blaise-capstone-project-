@@ -1,0 +1,157 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" rel="stylesheet" href="../CSS/admindashboard.css">
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <title>capstone project</title>
+    </head>
+    <body>
+        <div class="box-1">
+            <div>
+                <div class="container">
+                    <div class="nav-bar">
+                        <nav class="nav-links">
+                            <div class="logo">
+                                Blaise'Blog
+                            </div>
+                            <div class="links-1">
+                                <ul class="go links">
+                                    <div><li > <a href="../index.html">Home</a></li></div>
+                                    <div><li> <a href="blog.html">Blog</a></li></div>
+                                    <div><li class="logged-in"> <a href="newpost.html">new post</a></li></div>
+                                    <div><li class="logged-in"> <a href="posts.html">post</a></li></div>
+                                    <div><li class="logged-in"> <a href="message.html">Message</a></li></div>
+                                    <div><li class="logged-in"> <a href="profile.html">profile</a></li></div>
+                                    <div><li class="logged-in" id="log-out"> <a href="#">logout</a></li></div>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="burger">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h3>Your Information On The Website</h3>
+                <main class=" flex" >
+                    <article class="profile-1">
+                        <h2>Profile</h2>
+                        <form action="" class="profile-form">
+                            <label for="fname">First name</label>
+                            <input class="profile" type="text" name="fname" >
+                            <label for="lname">last name</label>
+                            <input  class="profile" type="text" name="lname" >
+                            <img src="" alt="profile-pic" class="profile-pic" style="width: 140px; height:120px;">
+                            <input id="pic" class="profile" type="file">
+                            <label for="description">Description</label>
+                            <textarea class="profile" type="text" name="description" style="width: 50%; height: 130px;" cols="30" rows="15"></textarea>
+                            <label for="about">About</label>
+                            <textarea class="profile" type="text" name="about" style="width: 50%; height: 130px;" cols="30" rows="15"></textarea>
+                            <button class=" profile-btn save" type="submit">Save</button>
+                        </form>
+                    </article>
+                    <article class="skil-1">
+                        <h2>Skills</h2>
+                        <form action="" class="skill-project container-2 skill-form">
+                            <!-- <div>
+                                <img src="" alt="profile-pic" class="skill-pic" style="width: 140px; height:120px;">
+                                <h5>Python</h5>
+                                <button class="remove">Remove</button>
+                            </div>
+                            <div>
+                                <img src="" alt="profile-pic" class="skill-pic" style="width: 140px; height:120px;">
+                                <input type="text" name="skill-2">
+                                <button class="remove">Remove</button>
+                            </div>
+                            <div>
+                                <img src="" alt="profile-pic" class="skill-pic" style="width: 140px; height:120px;">
+                                <input type="text" name="skill-3">
+                                <button class="remove">Remove</button>
+                            </div>
+                            <div>
+                                <img src="" alt="profile-pic" class="skill-pic" style="width: 140px; height:120px;">
+                                <input type="text" name="skill-1">
+                                <button class="remove">Remove</button>
+                            </div> -->
+                        </form>
+                        <button class=" profile-btn bbtn save-2" type="submit" style="display: none;">Save</button>
+                        <button class=" project-btn bbtn add-1" type="submit">Add</button>
+                     </article>
+                     <article class=" profile-1">
+                        <h2>project</h2>
+                        <form action="" class="skill-project container-2 project-form">
+                            <!-- <div>
+                                <img src="" alt="project-pic" class="project-pic" style="width: 140px; height:120px;">
+                                <textarea class="project" type="text" name="description"  cols="6" rows="8"></textarea>
+                                <button class="remove">Remove</button>
+                            </div>
+                            <div>
+                                <img src="" alt="project-pic" class="project-pic" style="width: 140px; height:120px;">
+                                <textarea class="project" type="text" name="description" cols="6" rows="8" ></textarea>
+                                <button class="remove">Remove</button>
+                            </div>
+                            <div>
+                                <img src="" alt="project-pic" class="project-pic" style="width: 140px; height:120px;">
+                                <textarea class="project" type="text" name="description"  cols="6" rows="8"></textarea>
+                                <button class="remove">Remove</button>
+                            </div> -->
+                        </form>
+                        <button class=" project-btn bbtn save-3" type="submit" style="display: none;">Save</button>
+                        <button class=" project-btn bbtn add-2" type="submit">Add</button>
+                     </article>
+                </main>
+            </div>
+            <div id="fotter">
+                <div class="container">
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/twitter-circled.png"/>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/linkedin.png"/>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/facebook.png"/>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/github.png"/>
+                    </div>    
+                </div>
+                <a href="https://icons8.com/icon/63777/github">GitHub icon by Icons8</a>
+            </div>
+        </div>
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyCmPR6YHmQw1hLT8T0HB01L7SOvIY_xPA4",
+                authDomain: "capstone-project-1e83a.firebaseapp.com",
+                databaseURL: "https://capstone-project-1e83a.firebaseio.com",
+                projectId: "capstone-project-1e83a",
+                storageBucket: "capstone-project-1e83a.appspot.com",
+                messagingSenderId: "297100326319",
+                appId: "1:297100326319:web:d80f33cae8f31705272b5a",
+                measurementId: "G-39J7GQCCHQ"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            // firebase.analytics();
+            const db=firebase.firestore();
+            const str =firebase.storage();
+            const auth =firebase.auth();
+            db.settings({ timestampsInSnapshots: true});
+            </script>
+        <script src="../js/admindashboard.js"></script>
+        <!-- <script src="../js/auth.js"></script> -->
+        <script src="../js/auth-signout.js"></script>
+        <script src="../js/profile.js"></script>
+        <script src="../js/skills.js"></script>
+        <script src="../js/projects.js"></script>
+    </body>
+</html>
