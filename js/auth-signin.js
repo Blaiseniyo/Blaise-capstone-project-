@@ -57,7 +57,7 @@ form.addEventListener('submit',(e)=>{
                 window.location.href=url;
             }
             else{
-                window.location.href='blog.html';
+            window.location.href='blog.html';
             }
         }).catch((error)=>{
             document.querySelector('.error-message').style.display='block';
