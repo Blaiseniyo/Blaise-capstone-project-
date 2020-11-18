@@ -130,10 +130,11 @@
             firebase.initializeApp(firebaseConfig);
             // firebase.analytics();
             const db=firebase.firestore();
-            const str =firebase.storage();
             const auth =firebase.auth();
             db.settings({ timestampsInSnapshots: true});
         </script>
         <script src="../JS/blog.js"></script>
+        <script src="../js/auth-signin.js"></script>
+        <script src="../JS/auth2.js"></script>
     </body>
 </html>

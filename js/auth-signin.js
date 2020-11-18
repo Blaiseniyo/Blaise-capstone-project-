@@ -52,7 +52,13 @@ form.addEventListener('submit',(e)=>{
         auth.signInWithEmailAndPassword(form.email.value,form.password.value).then((res)=>{
             document.querySelector('.error-message').style.display='none';
             form.reset();
-            window.location.href='blog.html';
+            if(location.hash){
+                let ur =location.hash.slice(1);
+                window.location.href=url;
+            }
+            else{
+                window.location.href='blog.html';
+            }
         }).catch((error)=>{
             document.querySelector('.error-message').style.display='block';
         })
