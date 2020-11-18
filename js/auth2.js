@@ -1,4 +1,3 @@
-let ur = location.hash.slice(1);
 document.getElementById('log-out').addEventListener('click', (e)=>{
     e.preventDefault()
     auth.signOut().then(()=>{
@@ -16,6 +15,5 @@ auth.onAuthStateChanged(user =>{
         }
     }else{
         setRules();
-        location.href
     }
 })
