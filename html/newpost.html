@@ -1,0 +1,127 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" rel="stylesheet" href="../CSS/admindashboard.css">
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <title>capstone project</title>
+    </head>
+    <body>
+        <div class="box-1">
+            <div>
+                <div class="container">
+                    <div class="nav-bar">
+                        <nav class="nav-links">
+                            <div class="logo">
+                                Blaise'Blog
+                            </div>
+                            <div class="links-1">
+                                <ul class="go links">
+                                    <div><li> <a href="../index.html">Home</a></li></div>
+                                    <div><li> <a href="blog.html">Blog</a></li></div>
+                                    <div><li class="logged-in"> <a href="newpost.html">new post</a></li></div>
+                                    <div><li class="logged-in"> <a href="posts.html">post</a></li></div>
+                                    <div><li class="logged-in"> <a href="message.html">Message</a></li></div>
+                                    <div><li class="logged-in"> <a href="profile.html">profile</a></li></div>
+                                    <div><li class="logged-in" id="log-out"> <a href="#">logout</a></li></div>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="burger">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h3>create new post</h3>
+                <main class="" >
+                    <article class="post">
+                        <form action="" id="new-post">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="title">
+                            <label for="">content</label>
+                            <textarea name="content" id="content" cols="30" rows="15" class="content"></textarea>
+                            <label for="">Upload the article's cover picture</label>
+                            <input type="file" name="image" id="cover-image">
+                            <button>Create</button>
+                        </form>
+                        <!-- <img  class="form-imaga" src="" alt=""> -->
+                    </article>
+                    <!-- <div class="post2 show">
+                        <article>
+                            <img src="https://www.openaccessgovernment.org/wp-content/uploads/2019/10/dreamstime_xxl_137795258.jpg" alt="">
+                            <div class="text">
+                                <h3 class="title2"></h3>
+                                <p class="content2"></p>
+                            </div>
+                            <button id="review">Post</button>
+                            <button class="cancel">cancel</button>
+                        </article>
+                    </div> -->
+                </main>
+                <div class="post2 show">
+                    <main class="">
+                        <article>
+                            <img id="bl" src="https://www.openaccessgovernment.org/wp-content/uploads/2019/10/dreamstime_xxl_137795258.jpg" alt="">
+                            <div class="text">
+                                <h3 class="title2"></h3>
+                                <p class="content2"></p>
+                            </div>
+                            <button id="review">Post</button>
+                            <button class="cancel">cancel</button>
+                        </article>
+                    </main>
+                </div>
+            </div>
+            <div id="fotter">
+                <div class="container">
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/twitter-circled.png"/>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/linkedin.png"/>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/facebook.png"/>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/github.png"/>
+                    </div>    
+                </div>
+                <a href="https://icons8.com/icon/63777/github">GitHub icon by Icons8</a>
+            </div>
+        </div>
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyCmPR6YHmQw1hLT8T0HB01L7SOvIY_xPA4",
+                authDomain: "capstone-project-1e83a.firebaseapp.com",
+                databaseURL: "https://capstone-project-1e83a.firebaseio.com",
+                projectId: "capstone-project-1e83a",
+                storageBucket: "capstone-project-1e83a.appspot.com",
+                messagingSenderId: "297100326319",
+                appId: "1:297100326319:web:d80f33cae8f31705272b5a",
+                measurementId: "G-39J7GQCCHQ"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            // firebase.analytics();
+            const db=firebase.firestore();
+            const str =firebase.storage();
+            const auth =firebase.auth();
+            db.settings({ timestampsInSnapshots: true});
+            </script>
+        <script src="../js/admindashboard.js"></script>
+        <script src="../js/newpost.js"></script>
+        <script src="../js/auth.js"></script>
+        <script src="../js/auth-signout.js"></script>
+        <!-- <script src="../js/posts.js"></script> -->
+    </body>
+</html>
