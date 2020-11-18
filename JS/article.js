@@ -31,7 +31,6 @@ function renderArticle(article){
     content.textContent=article.content;
     console.log(article.image);
     image.src=article.image;
-    image.style.height='400px'
 }
 
 db.collection('posts').doc(id).get().then((article)=>{

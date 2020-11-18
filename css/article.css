@@ -231,6 +231,23 @@ textarea{
 }
 
 
+
+@media screen and (max-width:414px){
+    article img {
+        height: 35%;
+    }
+}
+@media screen and (max-width:375px){
+    article img{
+        height: 30%;;
+    }
+}
+@media screen and (max-width:280px){
+    .container{
+        width: 85%;
+    }
+}
+
 @keyframes navLinkFade{
     from{
         opacity: 0;
