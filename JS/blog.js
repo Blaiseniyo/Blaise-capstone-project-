@@ -21,7 +21,33 @@ const navSlide = () => {
 
     });
 }
+navSlide();
 
+
+let loggedIn =document.querySelectorAll('.logged-in');
+let loggedOut =document.querySelectorAll('.logged-out');
+
+function setRules(user){
+    if(user){
+        loggedIn.forEach(link =>{
+            link.style.display='block';
+
+        })
+        loggedOut.forEach(link =>{
+            link.style.display='none';
+            
+        })
+    }else{
+        loggedIn.forEach(link =>{
+            link.style.display='none';
+
+        })
+        loggedOut.forEach(link =>{
+            link.style.display='block';
+            
+        })
+    }
+}
 
 const posts=document.querySelector('.grid');
 
