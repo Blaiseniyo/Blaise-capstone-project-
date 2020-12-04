@@ -13,6 +13,7 @@ form.addEventListener('submit',(e)=>{
         form.name.value=' ';
         form.email.value=' ';
         form.message.value=' ';
+        alert('your message was sent);
     }).catch(()=>{
         alert('your message was not sent, please try again');
     })
