@@ -6,6 +6,7 @@
         <title>capstone project</title>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     </head>
     <body>
         <div class="box-1">
@@ -25,7 +26,8 @@
                                         <div><li> <a href="#projects">Projects</a></li></div>
                                         <div><li> <a href="#about">About</a></li></div>
                                         <div><li> <a href="#contact">Contact</a></li></div>
-                                        <div><li> <a href="./html/signin.html">Sign in</a></li></div>
+                                        <div  class="logged-in" id="log-out" style="display: none;"><li> <a href="#">logout</a></li></div>
+                                        <div class="logged-out"><li> <a href="./html/signin.html">SignIn</a></li></div>
                                     </ul>
                                 </div>
                             </nav>
@@ -182,10 +184,12 @@
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
             const db=firebase.firestore();
+            const auth =firebase.auth();
             db.settings({ timestampsInSnapshots: true});
         </script>
         <script src="js/landing-page.js"></script>
         <script src="js/messages.js"></script>
+        <script src="../JS/auth2.js"></script>
     </body>
 </html>
 

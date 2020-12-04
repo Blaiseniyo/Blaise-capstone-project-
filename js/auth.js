@@ -9,7 +9,7 @@ document.getElementById('log-out').addEventListener('click', (e)=>{
 auth.onAuthStateChanged(user =>{
     if(user){
         setRules(user);
-        console.log('uesr logged in');
+        console.log('user logged in');
     }else{
         setRules();
         window.location.href=`signin.html#${url}`;

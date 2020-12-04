@@ -34,11 +34,11 @@ nav{
 }
 
 .logo{
-    flex: 7;
+    flex: 2;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 25px;
+    font-size: 17px;
     font-weight: 100;
 }
 
@@ -48,7 +48,7 @@ nav{
 }
 
 .nav-links{
-    flex: 7;
+    flex: 8;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -230,6 +230,23 @@ textarea{
     }
 }
 
+
+
+@media screen and (max-width:414px){
+    article img {
+        height: 35%;
+    }
+}
+@media screen and (max-width:375px){
+    article img{
+        height: 30%;;
+    }
+}
+@media screen and (max-width:280px){
+    .container{
+        width: 85%;
+    }
+}
 
 @keyframes navLinkFade{
     from{

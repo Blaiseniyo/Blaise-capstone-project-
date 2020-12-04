@@ -31,7 +31,6 @@ function renderArticle(article){
     content.textContent=article.content;
     console.log(article.image);
     image.src=article.image;
-    image.style.height='400px'
 }
 
 db.collection('posts').doc(id).get().then((article)=>{
@@ -84,4 +83,46 @@ form.addEventListener('submit', (e)=>{
     }
 })
 
+let loggedIn =document.querySelectorAll('.logged-in');
+let loggedOut =document.querySelectorAll('.logged-out');
+
+function setRules(user){
+    if(user){
+        loggedIn.forEach(link =>{
+            link.style.display='block';
+
+        })
+        loggedOut.forEach(link =>{
+            link.style.display='none';
+            
+        })
+    }else{
+        loggedIn.forEach(link =>{
+            link.style.display='none';
+
+        })
+        loggedOut.forEach(link =>{
+            link.style.display='block';
+            
+        })
+    }
+}
+
+let url =location.href;
+document.getElementById('log-out').addEventListener('click', (e)=>{
+    e.preventDefault()
+    auth.signOut().then(()=>{
+        console.log('clicked'); 
+    });
+})
+
+auth.onAuthStateChanged(user =>{
+    if(user){
+        setRules(user);
+        console.log('user logged in');
+    }else{
+        setRules();
+        window.location.href=`signin.html#${url}`;
+    }
+})
 navSlide();
