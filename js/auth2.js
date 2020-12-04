@@ -10,7 +10,7 @@ auth.onAuthStateChanged(user =>{
         setRules(user);
         console.log('user logged in');
         if(ur){
-            location.href=ur;
+//             location.href=ur;
         }else{
             // location.href
         }
