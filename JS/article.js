@@ -22,6 +22,34 @@ const navSlide = () => {
     });
 }
 
+navSlide();
+
+let loggedIn =document.querySelectorAll('.logged-in');
+let loggedOut =document.querySelectorAll('.logged-out');
+
+function setRules(user){
+    if(user){
+        loggedIn.forEach(link =>{
+            link.style.display='block';
+
+        })
+        loggedOut.forEach(link =>{
+            link.style.display='none';
+            
+        })
+    }else{
+        loggedIn.forEach(link =>{
+            link.style.display='none';
+
+        })
+        loggedOut.forEach(link =>{
+            link.style.display='block';
+            
+        })
+    }
+}
+
+
 let id=location.hash.slice(1);
 function renderArticle(article){
     const title=document.querySelector('#title');
